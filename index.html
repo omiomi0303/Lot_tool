@@ -31,12 +31,11 @@
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;font-family:-apple-system,"Hiragino Sans","Yu Gothic",system-ui,sans-serif}
   html,body{background:var(--bg);color:var(--ink);min-height:100vh;font-size:16px;padding-bottom:env(safe-area-inset-bottom);-webkit-font-smoothing:antialiased;font-feature-settings:"palt"}
   .wrap{max-width:440px;margin:0 auto;padding:24px 20px;padding-top:max(28px,env(safe-area-inset-top))}
-
+ 
   .header{text-align:center;margin-bottom:18px}
   .brand{font-size:11px;font-weight:600;letter-spacing:3px;color:var(--ink-3);text-transform:uppercase;margin-bottom:6px}
   .h1{font-size:24px;font-weight:700;color:var(--ink);letter-spacing:-.5px}
-
-  /* モード切替 */
+ 
   .mode-switch{
     display:grid;grid-template-columns:1fr 1fr;gap:6px;
     background:#fff;border:1px solid var(--line);padding:5px;
@@ -51,12 +50,11 @@
   .mode-switch button.active{color:#fff;box-shadow:0 1px 4px rgba(0,0,0,.12)}
   body.mode-lot .mode-switch button[data-mode="lot"]{background:#1A1A1A}
   body.mode-pips .mode-switch button[data-mode="pips"]{background:#1E3A5F}
-
-  /* Hero */
+ 
   .hero{background:var(--hero-bg);color:#fff;border-radius:24px;padding:26px 22px 22px;margin-bottom:18px;position:relative;overflow:hidden;transition:background .35s ease}
   .hero::after{content:"";position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(184,148,95,.18) 0%,transparent 70%);pointer-events:none;transition:background .35s ease}
   body.mode-pips .hero::after{background:radial-gradient(circle,rgba(91,176,232,.2) 0%,transparent 70%)}
-
+ 
   .hero-mode-tag{
     position:absolute;top:14px;right:16px;
     font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
@@ -68,8 +66,7 @@
   .hero-num{font-size:64px;font-weight:300;color:#fff;line-height:1;letter-spacing:-3px;font-variant-numeric:tabular-nums}
   .hero-unit{font-size:18px;font-weight:500;color:rgba(255,255,255,.7);letter-spacing:.5px}
   .hero-sub{font-size:12px;color:rgba(255,255,255,.6);text-align:center;letter-spacing:.3px;min-height:16px}
-
-  /* 分割表 */
+ 
   .splits{margin-top:14px;background:rgba(255,255,255,.06);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08);display:none}
   .splits.show{display:block}
   .splits-head{display:grid;grid-template-columns:60px 1fr 1fr;padding:8px 12px;background:rgba(255,255,255,.04);font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.5);text-transform:uppercase;font-weight:700}
@@ -77,7 +74,7 @@
   .splits-row .pos{color:rgba(255,255,255,.6);font-weight:500}
   .splits-row .lot{color:#fff;font-weight:600;text-align:left}
   .splits-row .pips{color:rgba(255,255,255,.85);font-weight:500;text-align:left}
-
+ 
   .spread-compare{margin-top:14px;background:rgba(255,255,255,.05);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
   .spread-row{display:grid;grid-template-columns:1fr 1fr 1fr;padding:9px 12px;align-items:center}
   .spread-row + .spread-row{border-top:1px solid rgba(255,255,255,.06)}
@@ -88,24 +85,24 @@
   .spread-row .col.right{color:#fff;font-weight:600;text-align:right}
   .spread-row .col.right.loss{color:#FCA5A5}
   .spread-row .col.right.profit{color:#86EFAC}
-
+ 
   .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:14px;background:rgba(255,255,255,.08);border-radius:12px;overflow:hidden}
   .stat{background:rgba(255,255,255,.04);padding:11px 14px}
   .stat-label{font-size:10px;font-weight:600;letter-spacing:1.5px;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:3px}
   .stat-value{font-size:18px;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-.3px}
   .stat-value .small{font-size:11px;color:rgba(255,255,255,.5);font-weight:400;margin-left:2px}
-
+ 
   .card{background:var(--surface);border-radius:20px;padding:18px 20px;margin-bottom:14px;border:1px solid var(--line)}
   .card-head{display:flex;align-items:center;gap:8px;margin-bottom:14px}
   .card-head-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);transition:background .3s ease}
   body.mode-pips .card-head-dot{background:#5BB0E8}
   .card-title{font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--ink-2);text-transform:uppercase}
-
+ 
   .field{margin-bottom:16px}
   .field:last-child{margin-bottom:0}
   .label{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;font-weight:600;color:var(--ink-2);margin-bottom:7px;letter-spacing:.3px}
   .label .hint{color:var(--ink-3);font-weight:400;font-size:11px}
-
+ 
   input,select{
     width:100%;height:50px;font-size:20px;font-weight:600;
     background:var(--bg);border:1.5px solid transparent;border-radius:13px;
@@ -116,7 +113,6 @@
   body.mode-pips input:focus,body.mode-pips select:focus{border-color:#1E3A5F;box-shadow:0 0 0 4px rgba(30,58,95,.08)}
   input[type=number]{font-variant-numeric:tabular-nums;text-align:right}
   input::placeholder{color:var(--ink-3);font-weight:400}
-  /* 入力済みの値はクッキリ */
   input:not(:placeholder-shown){color:var(--ink);font-weight:700;background:#FFF8E8}
   body.mode-pips input:not(:placeholder-shown){background:#EEF4FB}
   select{
@@ -124,7 +120,7 @@
     background-repeat:no-repeat;background-position:right 18px center;padding-right:38px;
     font-weight:600;text-align:left;color:var(--ink);
   }
-
+ 
   .segment{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:9px;background:var(--bg);padding:4px;border-radius:11px}
   .segment.split-3{grid-template-columns:repeat(3,1fr)}
   .segment button{
@@ -135,13 +131,20 @@
   }
   .segment button:active{transform:scale(.96)}
   .segment button.active{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
-
+ 
   .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
-  .pair-row{display:grid;grid-template-columns:1.7fr 1fr;gap:8px}
-  .rate-edit{font-size:15px;color:var(--gold)!important;font-weight:700;text-align:right;padding-right:14px;background:#FDF8EE!important}
+  .pair-row{display:grid;grid-template-columns:1.5fr 1fr;gap:8px}
+  .rate-edit{font-size:15px;color:var(--gold)!important;font-weight:700;text-align:right;padding-right:12px;background:#FDF8EE!important}
   .spread-edit{font-size:18px;color:var(--gold)!important;font-weight:700;text-align:right;background:#FDF8EE!important}
-
+ 
+  .usdjpy-row{background:#FFF8E8;border:1px solid #F4D9B0;border-radius:12px;padding:10px 14px;margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .usdjpy-row.hide{display:none}
+  .usdjpy-row label{font-size:12px;font-weight:600;color:#A05A1F;flex:1}
+  .usdjpy-row label .hint{display:block;font-size:10px;color:var(--ink-3);font-weight:400;margin-top:2px}
+  .usdjpy-input{width:110px;height:40px;font-size:16px;background:#fff;color:var(--gold);text-align:right;font-weight:700;padding:0 12px;border-radius:9px;border:1.5px solid transparent}
+  .usdjpy-input:focus{border-color:var(--gold);outline:none}
+ 
   .warn{
     background:#FFF8F0;border:1px solid #F4D9B0;color:#A05A1F;
     border-radius:12px;padding:12px 14px;margin-bottom:14px;
@@ -149,7 +152,7 @@
   }
   .warn.show{display:block;animation:slideDown .25s ease}
   @keyframes slideDown{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
-
+ 
   details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px;font-size:13px;color:var(--ink-2)}
   summary{cursor:pointer;font-weight:600;color:var(--ink);list-style:none;display:flex;align-items:center;gap:8px;font-size:13px}
   summary::-webkit-details-marker{display:none}
@@ -161,7 +164,7 @@
   details .step{display:grid;grid-template-columns:24px 1fr;gap:8px;margin-bottom:10px;align-items:start}
   details .step-num{background:var(--ink);color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
   details .step-text{font-size:13px;line-height:1.6}
-
+ 
   .reset{
     width:100%;height:44px;background:transparent;border:1px solid var(--line);
     color:var(--ink-3);border-radius:13px;font-size:13px;font-weight:500;cursor:pointer;
@@ -169,7 +172,7 @@
   }
   .reset:active{background:var(--hover);color:var(--ink-2)}
   .footer{text-align:center;font-size:11px;color:var(--ink-3);padding:18px 0 8px;letter-spacing:.3px;line-height:1.6}
-
+ 
   @media(max-width:360px){
     .hero-num{font-size:54px}
     input,select{font-size:18px;height:46px}
@@ -178,19 +181,17 @@
 </head>
 <body class="mode-lot">
 <div class="wrap">
-
+ 
   <div class="header">
     <div class="brand">FX · CALCULATOR</div>
     <div class="h1">ロット計算</div>
   </div>
-
-  <!-- モード切替 -->
+ 
   <div class="mode-switch">
     <button data-mode="lot" class="active"><span class="icon">▣</span>Lot 算出</button>
     <button data-mode="pips"><span class="icon">◇</span>Pips 算出</button>
   </div>
-
-  <!-- Hero Result -->
+ 
   <div class="hero">
     <div class="hero-mode-tag" id="modeTag">LOT MODE</div>
     <div class="hero-label" id="heroLabel">RECOMMENDED LOT</div>
@@ -199,8 +200,7 @@
       <span class="hero-unit" id="mainUnit">Lot</span>
     </div>
     <div class="hero-sub" id="lotSub">入力してください</div>
-
-    <!-- 分割エントリー -->
+ 
     <div class="splits" id="splitsView">
       <div class="splits-head">
         <div>分割</div>
@@ -209,8 +209,7 @@
       </div>
       <div id="splitsBody"></div>
     </div>
-
-    <!-- スプレッド比較 -->
+ 
     <div class="spread-compare">
       <div class="spread-row head">
         <div class="col">項目</div>
@@ -228,7 +227,7 @@
         <div class="col right profit"><span id="tpActual">—</span></div>
       </div>
     </div>
-
+ 
     <div class="stats">
       <div class="stat">
         <div class="stat-label">最大損失</div>
@@ -248,16 +247,15 @@
       </div>
     </div>
   </div>
-
+ 
   <div class="warn" id="warn"></div>
-
-  <!-- 資金 -->
+ 
   <div class="card">
     <div class="card-head">
       <div class="card-head-dot"></div>
       <div class="card-title">資金・許容損失</div>
     </div>
-
+ 
     <div class="field">
       <label class="label">資金 <span class="hint">円</span></label>
       <input type="number" id="capital" inputmode="numeric" placeholder="100,000" step="10000">
@@ -268,7 +266,7 @@
         <button data-capital="500000">50万</button>
       </div>
     </div>
-
+ 
     <div class="field">
       <label class="label">許容損失 <span class="hint">資金の何 % まで</span></label>
       <input type="number" id="riskPct" inputmode="decimal" placeholder="5" step="0.5">
@@ -280,23 +278,28 @@
       </div>
     </div>
   </div>
-
-  <!-- エントリー -->
+ 
   <div class="card">
     <div class="card-head">
       <div class="card-head-dot"></div>
       <div class="card-title">エントリー設定</div>
     </div>
-
+ 
     <div class="field">
-      <label class="label">通貨ペア <span class="hint">右=レート（編集可）</span></label>
+      <label class="label">通貨ペア <span class="hint" id="rateHint">右=現在レート</span></label>
       <div class="pair-row">
         <select id="pair"></select>
-        <input type="number" id="rate" class="rate-edit" inputmode="decimal" step="0.01">
+        <input type="number" id="rate" class="rate-edit" inputmode="decimal" step="0.0001">
+      </div>
+      <!-- 非クロス円の時だけ表示：USD/JPY参考レート入力欄 -->
+      <div class="usdjpy-row hide" id="usdjpyRow">
+        <label>USD/JPY 参考レート
+          <span class="hint">円換算に必要（USD/JPYの現在値）</span>
+        </label>
+        <input type="number" id="usdjpyRate" class="usdjpy-input" inputmode="decimal" step="0.01" value="155">
       </div>
     </div>
-
-    <!-- Lotモード時 -->
+ 
     <div id="lotInputs">
       <div class="row-3">
         <div class="field">
@@ -313,8 +316,7 @@
         </div>
       </div>
     </div>
-
-    <!-- Pipsモード時 -->
+ 
     <div id="pipsInputs" style="display:none">
       <div class="field">
         <label class="label">合計ロット <span class="hint">分割合計</span></label>
@@ -331,8 +333,7 @@
         </div>
       </div>
     </div>
-
-    <!-- 分割エントリー数 -->
+ 
     <div class="field" style="margin-top:14px">
       <label class="label">分割エントリー <span class="hint">合計を等分</span></label>
       <div class="segment split-3">
@@ -342,23 +343,29 @@
       </div>
     </div>
   </div>
-
-  <!-- Help -->
+ 
   <details>
     <summary><span class="chev">›</span>使い方・計算式</summary>
     <div class="content">
       <div class="step"><div class="step-num">1</div><div class="step-text"><strong>Lotモード</strong>：損切pipsを決めてから、許容損失を超えないロットを自動算出。</div></div>
       <div class="step"><div class="step-num">2</div><div class="step-text"><strong>Pipsモード</strong>：先にロットを決めてから、許容損失額に収まる損切pipsを逆算。</div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-text"><strong>分割エントリー</strong>：合計ロットを2等分・3等分して表示。同一価格に均等にナンピン/分割発注する場合に。</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-text"><strong>分割エントリー</strong>：合計ロットを2等分・3等分して表示。</div></div>
       <br>
+      <strong>レート入力</strong><br>
+      ・クロス円（USD/JPYなど）：そのまま <code>155.50</code> など<br>
+      ・対ドル系（EUR/USDなど）：そのまま <code>1.0850</code> など<br>
+      ・ゴールド（XAU/USD）：そのまま <code>2350.00</code> など<br>
+      → 通貨ペア選択時に標準値が入ります。手動で書き換え可能。<br><br>
+      <strong>USD/JPY参考レート</strong>（非クロス円選択時のみ表示）<br>
+      対ドル・対他通貨ペアの円換算に必要。<br><br>
       <strong>計算式（スプレッド込み）</strong><br>
-      <code>損失 = (損切pips+SP) × ロット × 換算値</code><br>
-      <code>利益 = (利確pips−SP) × ロット × 換算値</code><br>
-      <code>ロット = 許容損失額 ÷ ((損切pips+SP) × 換算値)</code><br>
-      換算値：クロス円=100、それ以外=対円レート。1ロット=10万通貨。
+      <code>損失 = (損切pips+SP) × ロット × 1pip円価値</code><br>
+      <code>利益 = (利確pips−SP) × ロット × 1pip円価値</code><br>
+      <code>ロット = 許容損失額 ÷ ((損切pips+SP) × 1pip円価値)</code><br>
+      1ロット=10万通貨。
     </div>
   </details>
-
+ 
   <details>
     <summary><span class="chev">›</span>RR比とは</summary>
     <div class="content">
@@ -367,81 +374,82 @@
       ・<strong>RR 1.0</strong>：損切と利確が同じpips（勝率50%超で利益）<br>
       ・<strong>RR 2.0</strong>：損切の2倍の利確を狙う（勝率33%でも収支トントン）<br>
       ・<strong>RR 3.0</strong>：損切の3倍狙い（勝率25%でトントン）<br><br>
-      <strong>目安</strong>：最低1.0、理想2.0以上。1未満は損切＞利確の悪い設定。<br>
-      勝率が低い手法ほどRRを高くする必要があります。
+      <strong>目安</strong>：最低1.0、理想2.0以上。
     </div>
   </details>
-
+ 
   <details>
     <summary><span class="chev">›</span>スプレッドの確認方法（MT4/MT5）</summary>
     <div class="content">
       <strong>iPhone MT4/MT5 アプリの場合</strong><br>
       <div class="step"><div class="step-num">1</div><div class="step-text">「気配値」タブを開く</div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-text">右上「鉛筆マーク（編集）」→「i（インフォメーション）」アイコンをタップ</div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-text">各通貨ペアの右側に Bid / Ask / Spread が表示される</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-text">右上「鉛筆マーク（編集）」→「i」アイコンをタップ</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-text">各通貨ペアの右側に Bid / Ask / Spread が表示</div></div>
       <br>
-      <strong>PC MT4/MT5 の場合</strong><br>
-      気配値ウィンドウで右クリック →「スプレッド」を表示。チャート上のBid/Askの差でも確認可能。<br><br>
-      <strong>注意</strong>：スプレッドは時間帯で大きく変わります（朝・深夜・指標前後は拡大）。エントリー直前に必ず確認してください。本ツールには標準的な値を内蔵していますが、実際の値で上書きすると正確な計算になります。
+      <strong>注意</strong>：スプレッドは時間帯で大きく変わります。エントリー直前に確認してください。
     </div>
   </details>
-
+ 
   <details>
     <summary><span class="chev">›</span>分割エントリーの考え方</summary>
     <div class="content">
       <strong>分割（ナンピン分割）とは</strong><br>
-      合計ロットを2〜3回に分けてエントリーする手法。<br><br>
-      ・想定方向と逆に動いた時、より良い価格で追加できる<br>
-      ・1回目で外しても、残りのロットで平均取得価格を改善できる<br>
-      ・心理的にも「全力エントリー」より落ち着いて判断できる<br><br>
-      <strong>本ツールの仕様</strong>：合計ロットを均等に分割表示します（例：合計0.30 → 0.10×3）。<br>
-      損切は全ポジション同じ位置に置く前提。利確も同様。<br>
-      最終損失額は合計ロットで計算されるため、許容損失額は変わりません。
+      合計ロットを2〜3回に分けてエントリー。<br>
+      ・想定逆方向に動いた時、より良い価格で追加可能<br>
+      ・1回目で外しても残りで平均取得価格を改善<br>
+      ・心理的に「全力」より落ち着いて判断できる<br><br>
+      損切は全ポジション同じ位置に置く前提。
     </div>
   </details>
-
+ 
   <button class="reset" id="resetBtn">入力をクリア</button>
-
+ 
   <div class="footer">
-    Lot Calculator · v3.0<br>
+    Lot Calculator · v3.1<br>
     レート・SPは手動更新してください
   </div>
 </div>
-
+ 
 <script>
 'use strict';
-
+ 
+// type: jpy=クロス円, usd=対ドル(EURUSDなど), gold=ゴールド, cross_xxx=クロス系(基軸=xxxの円換算が必要)
 const PAIRS = [
-  {code:'USDJPY', type:'jpy', spread:0.2},
-  {code:'EURJPY', type:'jpy', spread:0.5},
-  {code:'GBPJPY', type:'jpy', spread:1.0},
-  {code:'AUDJPY', type:'jpy', spread:0.7},
-  {code:'NZDJPY', type:'jpy', spread:1.2},
-  {code:'CADJPY', type:'jpy', spread:1.5},
-  {code:'CHFJPY', type:'jpy', spread:1.8},
-  {code:'EURUSD', type:'usd', spread:0.4},
-  {code:'GBPUSD', type:'usd', spread:0.9},
-  {code:'AUDUSD', type:'usd', spread:0.7},
-  {code:'NZDUSD', type:'usd', spread:1.4},
-  {code:'USDCAD', type:'cad', spread:1.2},
-  {code:'USDCHF', type:'chf', spread:1.0},
-  {code:'EURGBP', type:'gbp', spread:0.9},
-  {code:'EURAUD', type:'aud', spread:1.6},
-  {code:'EURNZD', type:'nzd', spread:2.6},
-  {code:'EURCAD', type:'cad', spread:1.8},
-  {code:'EURCHF', type:'chf', spread:1.6},
-  {code:'GBPAUD', type:'aud', spread:2.5},
-  {code:'GBPNZD', type:'nzd', spread:3.6},
-  {code:'GBPCAD', type:'cad', spread:3.0},
-  {code:'GBPCHF', type:'chf', spread:2.6},
-  {code:'AUDCAD', type:'cad', spread:1.6},
-  {code:'AUDCHF', type:'chf', spread:1.7},
-  {code:'AUDNZD', type:'nzd', spread:2.4},
-  {code:'NZDCAD', type:'cad', spread:2.8},
-  {code:'XAUUSD', type:'usd', spread:3.5},
+  {code:'USDJPY', type:'jpy', spread:0.2, defRate:155.00},
+  {code:'EURJPY', type:'jpy', spread:0.5, defRate:165.50},
+  {code:'GBPJPY', type:'jpy', spread:1.0, defRate:195.00},
+  {code:'AUDJPY', type:'jpy', spread:0.7, defRate:100.50},
+  {code:'NZDJPY', type:'jpy', spread:1.2, defRate:92.00},
+  {code:'CADJPY', type:'jpy', spread:1.5, defRate:113.50},
+  {code:'CHFJPY', type:'jpy', spread:1.8, defRate:175.00},
+  {code:'EURUSD', type:'usd', spread:0.4, defRate:1.0850, quote:'usd'},
+  {code:'GBPUSD', type:'usd', spread:0.9, defRate:1.2700, quote:'usd'},
+  {code:'AUDUSD', type:'usd', spread:0.7, defRate:0.6550, quote:'usd'},
+  {code:'NZDUSD', type:'usd', spread:1.4, defRate:0.6000, quote:'usd'},
+  {code:'USDCAD', type:'usd', spread:1.2, defRate:1.3650, quote:'cad'},
+  {code:'USDCHF', type:'usd', spread:1.0, defRate:0.8800, quote:'chf'},
+  {code:'EURGBP', type:'usd', spread:0.9, defRate:0.8500, quote:'gbp'},
+  {code:'EURAUD', type:'usd', spread:1.6, defRate:1.6500, quote:'aud'},
+  {code:'EURNZD', type:'usd', spread:2.6, defRate:1.8000, quote:'nzd'},
+  {code:'EURCAD', type:'usd', spread:1.8, defRate:1.4800, quote:'cad'},
+  {code:'EURCHF', type:'usd', spread:1.6, defRate:0.9550, quote:'chf'},
+  {code:'GBPAUD', type:'usd', spread:2.5, defRate:1.9300, quote:'aud'},
+  {code:'GBPNZD', type:'usd', spread:3.6, defRate:2.1100, quote:'nzd'},
+  {code:'GBPCAD', type:'usd', spread:3.0, defRate:1.7300, quote:'cad'},
+  {code:'GBPCHF', type:'usd', spread:2.6, defRate:1.1200, quote:'chf'},
+  {code:'AUDCAD', type:'usd', spread:1.6, defRate:0.8950, quote:'cad'},
+  {code:'AUDCHF', type:'usd', spread:1.7, defRate:0.5770, quote:'chf'},
+  {code:'AUDNZD', type:'usd', spread:2.4, defRate:1.0900, quote:'nzd'},
+  {code:'NZDCAD', type:'usd', spread:2.8, defRate:0.8200, quote:'cad'},
+  {code:'XAUUSD', type:'gold', spread:3.5, defRate:2350.00, quote:'usd'},
 ];
-const DEFAULT_RATES = { jpy:100, usd:155, cad:113, chf:175, gbp:198, aud:102, nzd:92 };
-
+ 
+// QUOTE通貨 → 対円レート（円換算に使う）
+// USDJPYは別管理、それ以外はクロスJPYペアから自動推定 or デフォルト
+const QUOTE_TO_JPY_DEFAULT = {
+  usd: 155, cad: 113, chf: 175, gbp: 198, aud: 102, nzd: 92,
+};
+ 
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => (!isFinite(n)||n===null) ? '—' : Math.round(n).toLocaleString('ja-JP');
 const fmtLot = (n) => {
@@ -451,27 +459,28 @@ const fmtLot = (n) => {
   return n.toFixed(3);
 };
 const fmtPips = (n) => (!isFinite(n) || n===null || n<=0) ? '—' : n.toFixed(1);
-
-const STORAGE_KEY = 'fx_lot_calc_v3';
+ 
+const STORAGE_KEY = 'fx_lot_calc_v31';
 function loadState(){ try{return JSON.parse(localStorage.getItem(STORAGE_KEY))||{}}catch(e){return{}} }
 function saveState(){
   const s = {
     mode:currentMode, split:currentSplit,
     capital:$('capital').value, riskPct:$('riskPct').value,
     pair:$('pair').value, rate:$('rate').value,
+    usdjpyRate:$('usdjpyRate').value,
     slPips:$('slPips').value, rr:$('rr').value, spread:$('spread').value,
     targetLot:$('targetLot').value, rrPips:$('rrPips').value, spreadPips:$('spreadPips').value,
     rateOverrides, spreadOverrides,
   };
   try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }catch(e){}
 }
-
+ 
 const state = loadState();
 let rateOverrides = state.rateOverrides || {};
 let spreadOverrides = state.spreadOverrides || {};
 let currentMode = state.mode || 'lot';
 let currentSplit = state.split || 1;
-
+ 
 function initPairs(){
   const sel = $('pair');
   PAIRS.forEach(p=>{
@@ -482,25 +491,162 @@ function initPairs(){
   });
   sel.value = state.pair || 'USDJPY';
 }
-
+ 
+function getCurrentPair(){
+  return PAIRS.find(p => p.code === $('pair').value);
+}
+ 
 function getRateForPair(code){
   if(rateOverrides[code]) return Number(rateOverrides[code]);
   const pair = PAIRS.find(p=>p.code===code);
-  return pair ? (DEFAULT_RATES[pair.type]||100) : 100;
+  return pair ? pair.defRate : 100;
 }
+ 
 function getSpreadForPair(code){
   if(spreadOverrides[code]!==undefined && spreadOverrides[code]!=='') return Number(spreadOverrides[code]);
   const pair = PAIRS.find(p=>p.code===code);
   return pair ? pair.spread : 0;
 }
+ 
+/**
+ * 1ロット（10万通貨）あたり1pips動いた時の円損益
+ * - クロス円(jpy): 1pips=0.01 → 100,000 × 0.01 = 1,000円
+ * - 対ドル系(usd/gold): 1pips=0.0001(または0.01 for gold) → 100,000 × 0.0001 × (quote→JPY)
+ *   = 10 × quoteJPYrate
+ *   ゴールドは1pip=0.01だが、慣習的にXAUUSDは1lot=100oz扱いが多い。ここでは10万通貨と同等の計算
+ */
+function calcPipValuePerLot(pair, pairRate, usdjpy) {
+  if(pair.type === 'jpy') {
+    return 1000; // 固定
+  }
+  if(pair.type === 'gold') {
+    // XAU/USD: 1pip = 0.01, 1lot = 100oz が一般的
+    // 100oz × 0.01 × usdjpy = usdjpy円
+    return usdjpy * 1; // 1pipsあたりおよそ usdjpy 円相当（参考）
+  }
+  // type === 'usd' (クロス通貨ペア含む)
+  // quote通貨の対円レートを取得
+  const quote = pair.quote;
+  let quoteToJpy;
+  if(quote === 'usd') quoteToJpy = usdjpy;
+  else {
+    // CAD, CHF, GBP, AUD, NZD などはデフォルト値（または将来の拡張で対円ペアから推定）
+    quoteToJpy = QUOTE_TO_JPY_DEFAULT[quote] || usdjpy;
+  }
+  // 1pips = 0.0001、1lot = 100,000通貨 → 100,000 × 0.0001 = 10 quote単位
+  return 10 * quoteToJpy;
+}
+ 
 function updatePairDefaults(){
-  const code = $('pair').value;
-  $('rate').value = getRateForPair(code);
-  const sp = getSpreadForPair(code);
+  const pair = getCurrentPair();
+  $('rate').value = getRateForPair(pair.code);
+  const sp = getSpreadForPair(pair.code);
   $('spread').value = sp;
   $('spreadPips').value = sp;
+ 
+  // step属性とplaceholderを通貨ペアタイプで切替
+  const rateInput = $('rate');
+  if(pair.type === 'jpy') {
+    rateInput.step = '0.01';
+    rateInput.placeholder = '155.00';
+    $('rateHint').textContent = '右=現在レート (例 155.00)';
+    $('usdjpyRow').classList.add('hide');
+  } else if(pair.type === 'gold') {
+    rateInput.step = '0.01';
+    rateInput.placeholder = '2350.00';
+    $('rateHint').textContent = '右=現在レート (例 2350.00)';
+    $('usdjpyRow').classList.remove('hide');
+  } else {
+    rateInput.step = '0.0001';
+    rateInput.placeholder = '1.0850';
+    $('rateHint').textContent = '右=現在レート (例 1.0850)';
+    // USDJPY参考レートは EUR/USD など対ドル系で必要、それ以外のクロス通貨(EUR/AUDなど)でも必要
+    $('usdjpyRow').classList.remove('hide');
+  }
 }
-
+ 
+function calcLotMode(){
+  const capital = Number($('capital').value)||0;
+  const riskPct = Number($('riskPct').value)||0;
+  const slPips = Number($('slPips').value)||0;
+  const rr = Number($('rr').value)||0;
+  const spread = Number($('spread').value)||0;
+  const usdjpy = Number($('usdjpyRate').value)||155;
+  const pair = getCurrentPair();
+  const pairRate = Number($('rate').value)||0;
+ 
+  if(!capital||!riskPct||!slPips||!pairRate){
+    resetOutput();
+    return;
+  }
+  const allowedLoss = capital * (riskPct/100);
+  const pipValuePerLot = calcPipValuePerLot(pair, pairRate, usdjpy);
+  const slPipsActual = slPips + spread;
+  const lot = allowedLoss / (slPipsActual * pipValuePerLot);
+  const actualLoss = lot * slPipsActual * pipValuePerLot;
+  const tpPipsDisplay = rr>0 ? slPips*rr : 0;
+  const tpPipsActual = Math.max(0, tpPipsDisplay - spread);
+  const actualProfit = rr>0 ? lot*tpPipsActual*pipValuePerLot : 0;
+  const realRR = (actualLoss>0 && actualProfit>0) ? actualProfit/actualLoss : 0;
+  const ratio = actualLoss/capital*100;
+ 
+  $('mainOut').textContent = fmtLot(lot);
+  $('lossOut').textContent = fmt(actualLoss);
+  $('profitOut').textContent = rr>0 ? fmt(actualProfit) : '—';
+  $('ratioOut').innerHTML = ratio.toFixed(1)+' <span class="small">%</span>';
+  $('rrOut').innerHTML = realRR>0 ? (realRR.toFixed(2)+' <span class="small">：1</span>') : '— <span class="small">：1</span>';
+  $('slDisplay').textContent = fmtPips(slPips);
+  $('slActual').textContent = fmtPips(slPipsActual);
+  $('tpDisplay').textContent = fmtPips(tpPipsDisplay);
+  $('tpActual').textContent = fmtPips(tpPipsActual);
+  const pipsValue = lot*pipValuePerLot;
+  $('lotSub').textContent = lot<0.01 ? '⚠ ロットが小さすぎ・資金UP検討' : `1 pips ≈ ${Math.round(pipsValue).toLocaleString()} 円`;
+ 
+  renderSplits(lot);
+  checkWarns({riskPct,slPips,rr,spread,tpPipsActual});
+}
+ 
+function calcPipsMode(){
+  const capital = Number($('capital').value)||0;
+  const riskPct = Number($('riskPct').value)||0;
+  const targetLot = Number($('targetLot').value)||0;
+  const rr = Number($('rrPips').value)||0;
+  const spread = Number($('spreadPips').value)||0;
+  const usdjpy = Number($('usdjpyRate').value)||155;
+  const pair = getCurrentPair();
+  const pairRate = Number($('rate').value)||0;
+ 
+  if(!capital||!riskPct||!targetLot||!pairRate){
+    resetOutput();
+    return;
+  }
+  const allowedLoss = capital * (riskPct/100);
+  const pipValuePerLot = calcPipValuePerLot(pair, pairRate, usdjpy);
+  const slPipsActual = allowedLoss / (targetLot * pipValuePerLot);
+  const slPipsDisplay = Math.max(0, slPipsActual - spread);
+  const actualLoss = targetLot * slPipsActual * pipValuePerLot;
+  const tpPipsDisplay = rr>0 ? slPipsDisplay*rr : 0;
+  const tpPipsActual = Math.max(0, tpPipsDisplay - spread);
+  const actualProfit = rr>0 ? targetLot*tpPipsActual*pipValuePerLot : 0;
+  const realRR = (actualLoss>0 && actualProfit>0) ? actualProfit/actualLoss : 0;
+  const ratio = actualLoss/capital*100;
+ 
+  $('mainOut').textContent = fmtPips(slPipsDisplay);
+  $('lossOut').textContent = fmt(actualLoss);
+  $('profitOut').textContent = rr>0 ? fmt(actualProfit) : '—';
+  $('ratioOut').innerHTML = ratio.toFixed(1)+' <span class="small">%</span>';
+  $('rrOut').innerHTML = realRR>0 ? (realRR.toFixed(2)+' <span class="small">：1</span>') : '— <span class="small">：1</span>';
+  $('slDisplay').textContent = fmtPips(slPipsDisplay);
+  $('slActual').textContent = fmtPips(slPipsActual);
+  $('tpDisplay').textContent = fmtPips(tpPipsDisplay);
+  $('tpActual').textContent = fmtPips(tpPipsActual);
+  const pipsValue = targetLot*pipValuePerLot;
+  $('lotSub').textContent = slPipsDisplay<=0 ? '⚠ ロット大きすぎ・SP超え' : `合計 ${fmtLot(targetLot)} Lot / 1 pips ≈ ${Math.round(pipsValue).toLocaleString()} 円`;
+ 
+  renderSplits(targetLot);
+  checkWarns({riskPct,slPips:slPipsDisplay,rr,spread,tpPipsActual});
+}
+ 
 function applyMode(mode){
   currentMode = mode;
   document.body.classList.remove('mode-lot','mode-pips');
@@ -525,7 +671,7 @@ function applyMode(mode){
   }
   calc();
 }
-
+ 
 function applySplit(n){
   currentSplit = n;
   document.querySelectorAll('[data-split]').forEach(b=>{
@@ -533,7 +679,7 @@ function applySplit(n){
   });
   calc();
 }
-
+ 
 function renderSplits(totalLot){
   const view = $('splitsView');
   const body = $('splitsBody');
@@ -555,99 +701,20 @@ function renderSplits(totalLot){
     body.appendChild(row);
   }
 }
-
-function calcLotMode(){
-  const capital = Number($('capital').value)||0;
-  const riskPct = Number($('riskPct').value)||0;
-  const rate = Number($('rate').value)||0;
-  const slPips = Number($('slPips').value)||0;
-  const rr = Number($('rr').value)||0;
-  const spread = Number($('spread').value)||0;
-
-  if(!capital||!riskPct||!slPips||!rate){
-    resetOutput();
-    return;
-  }
-  const allowedLoss = capital * (riskPct/100);
-  const pipValuePerLot = rate * 10;
-  const slPipsActual = slPips + spread;
-  const lot = allowedLoss / (slPipsActual * pipValuePerLot);
-  const actualLoss = lot * slPipsActual * pipValuePerLot;
-  const tpPipsDisplay = rr>0 ? slPips*rr : 0;
-  const tpPipsActual = Math.max(0, tpPipsDisplay - spread);
-  const actualProfit = rr>0 ? lot*tpPipsActual*pipValuePerLot : 0;
-  const realRR = (actualLoss>0 && actualProfit>0) ? actualProfit/actualLoss : 0;
-  const ratio = actualLoss/capital*100;
-
-  $('mainOut').textContent = fmtLot(lot);
-  $('lossOut').textContent = fmt(actualLoss);
-  $('profitOut').textContent = rr>0 ? fmt(actualProfit) : '—';
-  $('ratioOut').innerHTML = ratio.toFixed(1)+' <span class="small">%</span>';
-  $('rrOut').innerHTML = realRR>0 ? (realRR.toFixed(2)+' <span class="small">：1</span>') : '— <span class="small">：1</span>';
-  $('slDisplay').textContent = fmtPips(slPips);
-  $('slActual').textContent = fmtPips(slPipsActual);
-  $('tpDisplay').textContent = fmtPips(tpPipsDisplay);
-  $('tpActual').textContent = fmtPips(tpPipsActual);
-  const pipsValue = lot*pipValuePerLot;
-  $('lotSub').textContent = lot<0.01 ? '⚠ ロットが小さすぎ・資金UP検討' : `1 pips ≈ ${Math.round(pipsValue).toLocaleString()} 円`;
-
-  renderSplits(lot);
-  checkWarns({riskPct,slPips,rr,spread,tpPipsActual});
-}
-
-function calcPipsMode(){
-  const capital = Number($('capital').value)||0;
-  const riskPct = Number($('riskPct').value)||0;
-  const rate = Number($('rate').value)||0;
-  const targetLot = Number($('targetLot').value)||0;
-  const rr = Number($('rrPips').value)||0;
-  const spread = Number($('spreadPips').value)||0;
-
-  if(!capital||!riskPct||!targetLot||!rate){
-    resetOutput();
-    return;
-  }
-  const allowedLoss = capital * (riskPct/100);
-  const pipValuePerLot = rate * 10;
-  // 損切pips（SP込）= 許容損失 / (ロット × 換算値)
-  const slPipsActual = allowedLoss / (targetLot * pipValuePerLot);
-  const slPipsDisplay = Math.max(0, slPipsActual - spread);
-  const actualLoss = targetLot * slPipsActual * pipValuePerLot;
-  const tpPipsDisplay = rr>0 ? slPipsDisplay*rr : 0;
-  const tpPipsActual = Math.max(0, tpPipsDisplay - spread);
-  const actualProfit = rr>0 ? targetLot*tpPipsActual*pipValuePerLot : 0;
-  const realRR = (actualLoss>0 && actualProfit>0) ? actualProfit/actualLoss : 0;
-  const ratio = actualLoss/capital*100;
-
-  $('mainOut').textContent = fmtPips(slPipsDisplay);
-  $('lossOut').textContent = fmt(actualLoss);
-  $('profitOut').textContent = rr>0 ? fmt(actualProfit) : '—';
-  $('ratioOut').innerHTML = ratio.toFixed(1)+' <span class="small">%</span>';
-  $('rrOut').innerHTML = realRR>0 ? (realRR.toFixed(2)+' <span class="small">：1</span>') : '— <span class="small">：1</span>';
-  $('slDisplay').textContent = fmtPips(slPipsDisplay);
-  $('slActual').textContent = fmtPips(slPipsActual);
-  $('tpDisplay').textContent = fmtPips(tpPipsDisplay);
-  $('tpActual').textContent = fmtPips(tpPipsActual);
-  const pipsValue = targetLot*pipValuePerLot;
-  $('lotSub').textContent = slPipsDisplay<=0 ? '⚠ ロット大きすぎ・SP超え' : `合計 ${fmtLot(targetLot)} Lot / 1 pips ≈ ${Math.round(pipsValue).toLocaleString()} 円`;
-
-  renderSplits(targetLot);
-  checkWarns({riskPct,slPips:slPipsDisplay,rr,spread,tpPipsActual});
-}
-
+ 
 function checkWarns({riskPct, slPips, rr, spread, tpPipsActual}){
   const warns = [];
   if(riskPct>10) warns.push('許容損失が10%超 — リスク高');
   if(slPips>0 && slPips<5) warns.push('損切pipsが小さい — スプレッド負け注意');
   if(slPips>100) warns.push('損切pipsが大きい — 設定確認');
   if(rr>0 && rr<1) warns.push('RR比が1未満 — 損切＞利確');
-  if(spread>0 && slPips>0 && spread/slPips>0.3) warns.push('スプレッド比率が高い — 通貨/時間帯を見直し');
+  if(spread>0 && slPips>0 && spread/slPips>0.3) warns.push('スプレッド比率が高い');
   if(rr>0 && tpPipsActual<=0) warns.push('利確pipsよりSPが大きい — 利益が出ません');
   const warn = $('warn');
   if(warns.length){ warn.innerHTML = warns.join(' / '); warn.classList.add('show'); }
   else{ warn.classList.remove('show'); }
 }
-
+ 
 function resetOutput(){
   $('mainOut').textContent = '—';
   $('lossOut').textContent = '—';
@@ -662,21 +729,21 @@ function resetOutput(){
   $('splitsView').classList.remove('show');
   $('warn').classList.remove('show');
 }
-
+ 
 function calc(){
   if(currentMode === 'lot') calcLotMode();
   else calcPipsMode();
   saveState();
 }
-
+ 
 function syncSegment(group, value){
   document.querySelectorAll(`[data-${group}]`).forEach(b=>{
     b.classList.toggle('active', b.dataset[group]===String(value));
   });
 }
-
+ 
 function bindEvents(){
-  ['capital','riskPct','rate','slPips','rr','targetLot','rrPips'].forEach(id=>{
+  ['capital','riskPct','slPips','rr','targetLot','rrPips','usdjpyRate'].forEach(id=>{
     $(id).addEventListener('input', ()=>{
       if(id==='capital') syncSegment('capital', $(id).value);
       if(id==='riskPct') syncSegment('risk', $(id).value);
@@ -695,7 +762,7 @@ function bindEvents(){
     $('spread').value=$('spreadPips').value;
     calc();
   });
-
+ 
   document.querySelectorAll('[data-capital]').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       $('capital').value = btn.dataset.capital;
@@ -716,14 +783,14 @@ function bindEvents(){
   document.querySelectorAll('[data-split]').forEach(btn=>{
     btn.addEventListener('click', ()=>applySplit(Number(btn.dataset.split)));
   });
-
+ 
   $('resetBtn').addEventListener('click', ()=>{
     $('slPips').value=''; $('rr').value=''; $('targetLot').value=''; $('rrPips').value='';
     calc();
     (currentMode==='lot'?$('slPips'):$('targetLot')).focus();
   });
 }
-
+ 
 function init(){
   initPairs();
   $('capital').value = state.capital || '';
@@ -732,6 +799,7 @@ function init(){
   $('rr').value = state.rr || '';
   $('targetLot').value = state.targetLot || '';
   $('rrPips').value = state.rrPips || '';
+  $('usdjpyRate').value = state.usdjpyRate || '155';
   syncSegment('capital', state.capital);
   syncSegment('risk', state.riskPct);
   updatePairDefaults();
@@ -742,7 +810,7 @@ function init(){
   bindEvents();
   calc();
 }
-
+ 
 init();
 </script>
 </body>
